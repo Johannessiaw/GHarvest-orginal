@@ -1,0 +1,30 @@
+project: GHarvest-kofi
+sources:
+  - id: ghana-speech
+    hf: ghananlpcommunity/ghana-speech
+    task: asr
+    license: CC-BY-NC-4.0
+  - id: ghana-speech-eval
+    hf: ghananlpcommunity/ghana-speech-eval
+    task: evaluation-only
+    license: CC-BY-NC-4.0
+  - id: kasa-codeswitch-ipa
+    hf: ghananlpcommunity/Ghana_English-Twi_Code-switching_Speech-ipa
+    task: asr-codeswitch
+    license: Apache-2.0
+  - id: twi-tts-asr
+    hf: ghananlpcommunity/twi-tts-asr
+    task: asr-tts
+    license: verify-current-card
+  - id: navigation-corpus-twi
+    hf: ghananlpcommunity/navigation-corpus-twi-speech
+    task: asr-tts
+    license: verify-current-card
+  - id: ghana-english-asr
+    hf: ghananlpcommunity/ghana-english-asr-2700hrs
+    task: ghana-english-asr
+    license: verify-current-card
+  - id: ghana-speech-id
+    hf: ghananlpcommunity/ghana-speech-id
+    task: language-id
+    license: CC-BY-NC-4.0

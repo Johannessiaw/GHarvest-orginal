@@ -1,0 +1,8 @@
+id,hf,task,license
+ghana-speech,ghananlpcommunity/ghana-speech,asr,CC-BY-NC-4.0
+ghana-speech-eval,ghananlpcommunity/ghana-speech-eval,evaluation-only,CC-BY-NC-4.0
+kasa-codeswitch-ipa,ghananlpcommunity/Ghana_English-Twi_Code-switching_Speech-ipa,asr-codeswitch,Apache-2.0
+twi-tts-asr,ghananlpcommunity/twi-tts-asr,asr-tts,verify-current-card
+navigation-corpus-twi,ghananlpcommunity/navigation-corpus-twi-speech,asr-tts,verify-current-card
+ghana-english-asr,ghananlpcommunity/ghana-english-asr-2700hrs,ghana-english-asr,verify-current-card
+ghana-speech-id,ghananlpcommunity/ghana-speech-id,language-id,CC-BY-NC-4.0
