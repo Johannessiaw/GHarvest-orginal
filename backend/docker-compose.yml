@@ -1,0 +1,37 @@
+services:
+  api:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    environment:
+      GHarvest_DB: /data/GHarvest.db
+      GHANANLP_API_KEY: ${GHANANLP_API_KEY:-}
+      GHANANLP_BASE_URL: ${GHANANLP_BASE_URL:-https://translation-api.ghananlp.org}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5.6-luna}
+      PREFER_LOCAL_MODELS: ${PREFER_LOCAL_MODELS:-true}
+      LOCAL_ASR_URL: ${LOCAL_ASR_URL:-}
+      LOCAL_TTS_URL: ${LOCAL_TTS_URL:-}
+      LOCAL_TRANSLATION_URL: ${LOCAL_TRANSLATION_URL:-}
+      LOCAL_LLM_URL: ${LOCAL_LLM_URL:-}
+      LOCAL_LLM_TOKEN: ${LOCAL_LLM_TOKEN:-}
+      LOCAL_ASR_MODEL: ${LOCAL_ASR_MODEL:-}
+      LOCAL_TTS_VOICE: ${LOCAL_TTS_VOICE:-twi-1}
+      LOCAL_TTS_VOICE_TWI: ${LOCAL_TTS_VOICE_TWI:-twi-6}
+      LOCAL_TTS_VOICE_MIXED: ${LOCAL_TTS_VOICE_MIXED:-twi-1}
+      LOCAL_LLM_MODEL: ${LOCAL_LLM_MODEL:-}
+      MARKET_DATA_URL: ${MARKET_DATA_URL:-https://srid.mofa.gov.gh/sites/default/files/uploaded_resources/Commodity%20prices%20_04.11.25.csv}
+      MARKET_DATA_TOKEN: ${MARKET_DATA_TOKEN:-}
+      PAYSTACK_SECRET_KEY: ${PAYSTACK_SECRET_KEY:-}
+      PAYSTACK_WEBHOOK_SECRET: ${PAYSTACK_WEBHOOK_SECRET:-}
+      PAYSTACK_CALLBACK_URL: ${PAYSTACK_CALLBACK_URL:-}
+      DEMO_MODE: ${DEMO_MODE:-false}
+      WEATHER_ENABLED: ${WEATHER_ENABLED:-true}
+      MAX_AUDIO_BYTES: ${MAX_AUDIO_BYTES:-6291456}
+      MAX_AUDIO_SECONDS: ${MAX_AUDIO_SECONDS:-120}
+    volumes:
+      - GHarvest_data:/data
+volumes:
+  GHarvest_data:
